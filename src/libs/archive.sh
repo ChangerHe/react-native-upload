@@ -31,7 +31,8 @@ then
     -configuration "Release" \
     -archivePath "$archive_path" \
     -allowProvisioningUpdates \
-    -showBuildTimingSummary
+    -showBuildTimingSummary \
+    -quiet
 elif [ -n "$project" ]
 then
   echo "Find xcodeproj: $project"
@@ -47,7 +48,8 @@ then
     -configuration "Release" \
     -archivePath "$archive_path" \
     -allowProvisioningUpdates \
-    -showBuildTimingSummary
+    -showBuildTimingSummary \
+    -quiet
 else
   echo "\n\033[31mNeither workspace nor xcodeproj is found, it may be invalid ios project.\033[0m\n"
   exit 1
